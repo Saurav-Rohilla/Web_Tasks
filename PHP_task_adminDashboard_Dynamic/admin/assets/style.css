@@ -1,0 +1,35 @@
+a{
+    text-decoration: none;
+    color: #000;
+    padding: 10px 15px;
+    background-color: blueviolet;
+    text-align: center;
+}
+.mainContainer{
+    
+    margin: auto;
+    margin-top: 100px;
+    width: 350px;
+    height: 500px;
+    display: grid;
+    border: 1px solid #000;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.semiContainer{
+    display: block;
+    width: 300px;
+    margin: auto;
+}
+.buttonDiv{
+    display: flex;
+    justify-content: space-evenly;
+    width: 400px;
+}
+#logo_image, #logo_text{
+    display : none;
+}
+.menu_list{
+    display: grid;
+}
