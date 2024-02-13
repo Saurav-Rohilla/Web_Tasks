@@ -5,6 +5,11 @@ a{
     background-color: blueviolet;
     text-align: center;
 }
+p{
+    margin: 0px;
+    padding: 0px;
+    width: 100px;
+}
 .mainContainer{
     
     margin: auto;
@@ -32,4 +37,10 @@ a{
 }
 .menu_list{
     display: grid;
+}
+.imgLabel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
 }

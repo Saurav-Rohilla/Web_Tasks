@@ -58,15 +58,20 @@ $(document).ready(function(){
     });
     $(".submitButton").click(function(){
         var imgLogo="";
+        var fileExtension="";
+        alert("inside");
         if($("#logo_text").val() == "")
         {
             imgLogo = $("#logo_image")[0].files[0];
+            var fileType = $("#logo_image")[0].files[0].name; 
+            fileExtension = fileType.replace(/^.*\./, '');
         }
         else
         {
             imgLogo = $("#logo_text").val();
         }
-        alert(imgLogo);
+        
+        
         var first_item = $("#first-list-item").val();
         var second_item = $("#second-list-item").val();
         var third_item = $("#third-list-item").val();
@@ -77,8 +82,9 @@ $(document).ready(function(){
         var anchorText= $("#anchorField").val();
         var bannerimgName = $("#bannerimgField")[0].files[0];
 
+        var banfileType = $("#bannerimgField")[0].files[0].name;
+        var banfileext = banfileType.replace(/^.*\./, '');
         var formData = new FormData();
-        
         formData.append("imgLogo", imgLogo);
         formData.append("first_item", first_item);
         formData.append("second_item",second_item);
@@ -89,25 +95,39 @@ $(document).ready(function(){
         formData.append("para", para);
         formData.append("anchorText", anchorText);
         formData.append("bannerimgName", bannerimgName);
-        if(imgLogo != "" && first_item!="" && second_item!="" && third_item!="" && fourth_item!="" && fifth_item!="" && head!="" && para!="" && anchorText!="" && bannerimgName!="")
+    
+        
+        
+        alert(fileExtension );
+        alert(banfileext);
+
+        
+        if(fileExtension !="pdf" && banfileext !="pdf")
         {
-            $.ajax({
-                url : "saveContent.php",
-                type : 'POST',
-                data : formData,
-                contentType: false,
-                processData: false,
-                success : function(response){
-                    alert(response);
-                }
-            });
+            if(imgLogo != "" && first_item!="" && second_item!="" && third_item!="" && fourth_item!="" && fifth_item!="" && head!="" && para!="" && anchorText!="" && bannerimgName!="")
+            {
+                $.ajax({
+                    url : "saveContent.php",
+                    type : 'POST',
+                    data : formData,
+                    contentType: false,
+                    processData: false,
+                    success : function(response){
+                        alert(response);
+                    }
+                });
+            }
+            else
+            {
+                alert("All Fields are mandatory!!!");
+            }
         }
         else
         {
-            alert("All Fields are mandatory!!!");
+            alert("PDF Not allowed!!!");
         }
         alert("ajax Failed");
-    });
+     });
     $(".logOutButton").click(function(){
         $.ajax({
             url : 'sessionDestroy.php',
@@ -124,10 +144,16 @@ $(document).ready(function(){
             $("#logo_image").css("display","block");
             $("#logo_text").css("display","none");
         }
-        else
+        else if(temp == 'Text')
         {
             $("#logo_image").css("display","none");
             $("#logo_text").css("display","block");
+            $('.upperP').hide();
+        }
+        else
+        {
+            $("#logo_image").css("display","none");
+            $("#logo_text").css("display","none");
         }
     });
 });
