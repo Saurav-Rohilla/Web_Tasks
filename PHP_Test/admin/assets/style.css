@@ -1,0 +1,30 @@
+a{
+    padding: 10px 15px;
+    background: aqua;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+.maincontainer{
+    max-width: 400px;
+    height: 500px;
+    margin: auto;
+    border: 1px solid #000;
+    border-radius: 3px;
+    padding-top: 30px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.semicontainer{
+        margin: auto;
+        width: 250px;
+        margin: auto;
+}
+.indexcontainer{
+    height: 300px;
+}
+.editContainer{
+    height: 1600px;
+}
