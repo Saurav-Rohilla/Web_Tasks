@@ -1,0 +1,331 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background: aqua;
+}
+.animation-container{
+    /* background-color: aqua; */
+    width: 100%;
+    height: 10px;
+}
+.first, .second, .third , .fourth, .fifth{
+    height: 60;
+    
+    position: relative;
+}
+.first{
+    background-color: orange;
+    animation: first 5s linear 0s infinite alternate none;
+}
+.second{
+    background-color: yellow;
+    animation: second 5s linear 0s infinite alternate none;
+}
+.third{
+    background-color: red;
+    animation: third 5s linear 0s infinite alternate none;
+}
+.fourth{
+    background-color: green;
+    animation: fourth 5s linear 0s infinite alternate none;
+}
+.fifth{
+    background-color: blue;
+    animation: fifth 5s linear 0s infinite alternate none;
+}
+
+/* First */
+@keyframes first {
+    0%{
+        background: orange;
+    }
+    10%{
+        background-color: yellow;
+    }
+    20%{
+        background-color: red;
+    }
+    30%{
+        background-color: green;
+    }
+    40%{
+        background-color: blue;
+    }
+    50%{
+        background-color: green;
+    }
+    60%{
+        background-color: red;
+    }
+    70%{
+        background-color: yellow;
+    }
+    80%{
+        background: orange;
+    }
+    90%{
+        background-color: red;
+    }
+    100%{
+        background-color: green;
+    }
+}
+/* Second */
+@keyframes second {
+    0%{
+        background: yellow;
+    }
+    10%{
+        background-color: red;
+    }
+    20%{
+        background-color: green;
+    }
+    30%{
+        background-color: blue;
+    }
+    40%{
+        background-color: green;
+    }
+    50%{
+        background-color: red;
+    }
+    60%{
+        background-color: yellow;
+    }
+    70%{
+        background-color: orange;
+    }
+    80%{
+        background: red;
+    }
+    90%{
+        background-color: green;
+    }
+    100%{
+        background-color: green;
+    }
+}
+@keyframes third {
+    0%{
+        background: red;
+    }
+    10%{
+        background-color: green;
+    }
+    20%{
+        background-color: blue;
+    }
+    30%{
+        background-color: orange;
+    }
+    40%{
+        background-color: yellow;
+    }
+    50%{
+        background-color: green;
+    }
+    60%{
+        background-color: orange;
+    }
+    70%{
+        background-color: red;
+    }
+    80%{
+        background: orange;
+    }
+    90%{
+        background-color: red;
+    }
+    100%{
+        background-color: green;
+    }
+}
+@keyframes fourth {
+    0%{
+        background: hotpink;
+    }
+    10%{
+        background-color: aqua;
+    }
+    20%{
+        background-color: lawngreen;
+    }
+    30%{
+        background-color: teal;
+    }
+    40%{
+        background-color: navy;
+    }
+    50%{
+        background-color: crimson;
+    }
+    60%{
+        background-color: navy;
+    }
+    70%{
+        background-color: teal;
+    }
+    80%{
+        background: lawngreen;
+    }
+    90%{
+        background-color: aqua;
+    }
+    100%{
+        background-color: hotpink;
+    }
+}
+@keyframes fifth {
+    0%{
+        background: yellow;
+    }
+    10%{
+        background-color: darkred;
+    }
+    20%{
+        background-color: aquamarine;
+    }
+    30%{
+        background-color: navy;
+    }
+    40%{
+        background-color: coral;
+    }
+    50%{
+        background-color: goldenrod;
+    }
+    60%{
+        background-color: brown;
+    }
+    70%{
+        background-color: purple;
+    }
+    80%{
+        background: mediumaquamarine;
+    }
+    90%{
+        background-color: whitesmoke;
+    }
+    100%{
+        background-color: olive;
+    }
+}
+
+.rocket{
+    z-index: 1;
+    position: absolute;
+    left: 43%;
+    bottom: 0px;
+    width: 100px;
+    height: 100px;
+    animation: rocket 5s linear 0s infinite normal none;
+}
+@keyframes rocket {
+    0%{
+        left: 43%;
+    }
+    10%{
+        left: 46%;
+    }
+    20%{
+        left: 43%;
+    }
+    30%{
+        left: 46%;
+    }
+    40%{
+        left: 43%;
+    }
+    50%{
+        left: 46%;
+    }
+    60%{
+        left: 43%;
+    }
+    70%{
+        left: 46%;
+    }
+    80%{
+        left: 43%;
+    }
+    90%{
+        left: 46%;
+    }
+    100%{
+        left: 43%;
+    }
+}
+.fifth div{
+    position: absolute;
+    top: 10px;
+    width: 3px;
+    height: 30px;
+    border-top: 1px;
+    border-radius: 30px;
+    background: #000;
+}
+.first-div{
+    left: 49%;
+    animation: first-div 1s linear 0s infinite normal none;
+}
+.second-div{
+    left: 50%;
+    animation: first-div 0.4s linear 0.1s infinite normal none;
+}
+.third-div{
+    left: 52%;
+    animation: first-div 0.5s linear 0.2s infinite normal none;
+}
+.fourth-div{
+    left: 53%;
+    animation: first-div 0.7s linear 0.3s infinite normal none;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+/* .fifth-div{
+    left: 57%;
+    animation: first-div 0.7s linear 0s infinite normal none;
+} */
+@keyframes first-div {
+    0%,10%{
+        opacity: 1;
+        height: 25px;
+    }
+    41%,100%{
+        opacity: 0;
+    }
+}
+@keyframes second-div {
+    0%,40%{
+        opacity: 1;
+        height: 25px;
+    }
+    41%,100%{
+        opacity: 0;
+    }
+}
+
+@keyframes third-div {
+    0%,40%{
+        opacity: 1;
+        height: 25px;
+    }
+    41%,100%{
+        opacity: 0;
+    }
+}
+
+@keyframes fourth-div {
+    0%,40%{
+        opacity: 1;
+        height: 25px;
+    }
+    41%,100%{
+        opacity: 0;
+    }
+}
+
+

@@ -1,0 +1,45 @@
+@media (min-width: 2000px) {
+    .head-container .container {
+        position: relative;
+    }
+}
+@media screen and (max-width: 1420px) {
+    .row{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .left-banner{
+        max-width: 58%;
+        flex: 0 0 58%;
+    }
+    .right-banner{
+        max-width: 42%;
+        flex: 0 0 42%;
+    }
+    .blog-grid-container{
+        max-width: 1300px;
+    }
+}
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1428px;
+    }
+}
