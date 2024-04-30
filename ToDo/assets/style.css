@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+body{
+    background-color: hsl(60, 2%, 22%);
+    color: #fff;
+}
+
+table{
+    color: #000;
+}
+
+label{
+    margin-top: 10px;
+    color: #fff;
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* margin-top: 200px; */
+}
+
+.checkbox{
+    justify-content: space-between;
+}
+
+.button-container{
+    text-align: center;
+    overflow: hidden;
+    /* width: 90px; */
+    transition: all 0.35s ease;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#save-button{
+    margin-top: 10px;
+}
+
+#output{
+    background-color: bisque;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    padding: 20px 10px;
+}
+
+
+
+.button{
+    position: relative;
+    display: inline-block;
+}
+
+.button-container:hover{
+    background: #39FF14;
+    color: #fff;
+    box-shadow: 0px 0px 100px #39FF14;
+    border-radius: 10px;
+}
+
+span{
+    position: absolute;
+    display: block;
+}
+
+span:nth-child(1){
+    width: 100%;
+    top: 0px;
+    left: -100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #39FF14);
+    animation: span-1 2s linear infinite;
+}
+
+@keyframes span-1 {
+    0%{
+        left: -100%;
+    }
+    /* 10%{
+        background:linear-gradient(90deg, transparent, aqua);;
+    }
+    20%{
+        background:linear-gradient(90deg, transparent, red);;
+    }
+    30%{
+        background:linear-gradient(90deg, transparent, orange);;
+    }
+    40%{
+        background:linear-gradient(90deg, transparent, purple);;
+    } */
+    50%,100%{
+        left: 135%;
+    }
+}
+
+span:nth-child(2){
+    height: 100%;
+    top: -100%;
+    right: 0%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, #39FF14);
+    animation: span-2 2s linear  infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes span-2 {
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+span:nth-child(3){
+    width: 100%;
+    right: -135%;
+    height: 2px;
+    bottom: 0%;
+    background: linear-gradient(270deg, transparent, #39FF14);
+    animation: span-3 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes span-3 {
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 135%;
+    }
+}
+
+span:nth-child(4){
+    height: 100%;
+    width: 2px;
+    bottom: -100%;
+    left: 0%;
+    background: linear-gradient(360deg, transparent, #39FF14);
+    animation: span-4 2s linear infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes span-4 {
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+
+.form-container{
+    padding: 30px 30px;
+    /* height: 400px; */
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border:1px solid #fff;
+    border-radius: 50px;
+}
+
+#form-button{
+    margin-top: 50px;
+    overflow: hidden;
+    width: 90px;
+}

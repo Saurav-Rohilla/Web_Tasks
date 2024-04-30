@@ -1,0 +1,164 @@
+<html>
+  <head>
+    <title>To Do Application</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <div class="button-container" id="form-button">
+      <a href="" class="button">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Fetch Data
+      </a>
+    </div>
+    <div class="row">
+      <form action="#" method="post">
+        <div class="form-container">
+          <h3>To change status/Search/Save</h3>
+          <label for="">User Id</label>
+          <input type="text" id="userid-input" />
+
+          <label for="">Id</label>
+          <input type="text" id="id-input" />
+
+          <label for="">Title</label>
+          <input type="text" id="title-input" />
+
+          <label for="">Completed</label>
+          <div class="row checkbox">
+            <div class="row">
+              <input
+                type="radio"
+                id="falseCheck"
+                name="falseCheck"
+                value="false"
+              />
+              <label for="falseCheck">False</label>
+            </div>
+            <div class="row">
+              <input
+                type="radio"
+                id="trueCheck"
+                name="falseCheck"
+                value="true"
+              />
+              <label for="falseCheck">True</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="button-container" id="save-button">
+              <a href="" class="button">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Save Data
+              </a>
+            </div>
+
+            <div class="button-container" id="status-button">
+              <a href="" class="button">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Change Status
+              </a>
+            </div>
+          </div>
+          <label for="">Enter Title to search:</label>
+          <div class="row">
+            <input type="text" id="search-area" />
+            <div class="button-container" id="search-button">
+              <a href="" class="button">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Search
+              </a>
+            </div>
+          </div>
+        </div>
+      </form>
+      <form action="#" method="post">
+        <div class="form-container">
+          <h3>To Edit ToDos</h3>
+          <label for="">Enter Id to target</label>
+          <input type="text" id="id" />
+          <label for="">User Id</label>
+          <input type="text" id="userId" />
+          <label for="">Title</label>
+          <input type="text" id="title" />
+          <label for="">Completed/Status </label>
+          <div class="row checkbox">
+            <div class="row">
+              <input
+                type="radio"
+                id="falseStatus"
+                name="statusCheck"
+                value="false"
+              />
+              <label for="falseCheck">False</label>
+            </div>
+            <div class="row">
+              <input
+                type="radio"
+                id="trueStatus"
+                name="statusCheck"
+                value="true"
+              />
+              <label for="falseCheck">True</label>
+            </div>
+          </div>
+          <div class="button-container" id="update-button">
+            <a href="" class="button">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Update
+            </a>
+          </div>
+        </div>
+      </form>
+      <form action="#">
+        <div class="form-container">
+          <h3>Delete</h3>
+          <label for="">Enter Id</label>
+          <input type="text" id="delete" />
+          <div class="button-container" id="delete-button">
+            <a href="" class="button">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Delete
+            </a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="output">
+      <table id="data-container">
+        <thead>
+          <tr>
+            <th>User Id</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Completed</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="assets/main.js"></script>
+  </body>
+</html>
